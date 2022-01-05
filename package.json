@@ -1,0 +1,25 @@
+{
+  "name": "vite-svelte-routify-app",
+  "private": true,
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:routify": "routify",
+    "dev:vite": "vite",
+    "preview": "vite preview",
+    "build": "run-s build:*",
+    "build:routify": "routify -b",
+    "build:vite": "vite build"
+  },
+  "devDependencies": {
+    "@opendatasoft/api-client": "latest",
+    "@roxi/routify": "latest",
+    "@sveltejs/vite-plugin-svelte": "latest",
+    "autoprefixer": "latest",
+    "npm-run-all": "latest",
+    "postcss": "latest",
+    "sass": "^1.45.1",
+    "svelte": "latest",
+    "svelte-preprocess": "^4.10.1",
+    "vite": "latest"
+  }
+}
