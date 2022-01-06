@@ -1,0 +1,20 @@
+{
+    "domainid": "eurometrostrasbourg",
+    "datasetid": "occupation-parkings-temps-reel",
+    "charts": [
+    {
+        "title": "Etat",
+        "axex": "etat_descriptif",
+        "id": "myChart2",
+        "type": "pie",
+        "expression": "count(*)"
+    },
+    {
+        "title": "Capacité totale",
+        "axex": "nom_parking",
+        "id": "myChart3",
+        "type": "bar",
+        "expression": "sum(total)"
+    }
+]
+}
