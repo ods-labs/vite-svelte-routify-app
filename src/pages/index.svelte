@@ -1,26 +1,24 @@
 <script>
-    let world = 'World !';
+    import {ApiClient, fromCatalog} from "@opendatasoft/api-client";
+
+    let test1 = [];
+
+    const client = new ApiClient({domain: 'fpassaniti'});
+    let query = fromCatalog().dataset('pastedtext').exports('geojson').limit(10);
+    client.get(query)
+        .then(res => res)
+        .then(res => test1 = res.features)
+        .catch(err => {
+            console.log(err);
+        });
 </script>
 
 <div class="content">
-    <h1>Hello { world }</h1>
-    <p>Lorem ipsum...</p>
+    <ul>
+        <li>{JSON.stringify(test1)}</li>
+    </ul>
 </div>
 
 <style lang="scss">
   @import "./src/styles/variables";
-
-  h1 {
-    color: $primary;
-    border-bottom: 2px solid $secondary;
-  }
-
-  h2 {
-    color: $primary;
-    border-bottom: 2px solid $secondary;
-  }
-
-  p {
-    font-weight: 600;
-  }
 </style>
